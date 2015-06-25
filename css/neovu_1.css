@@ -1,0 +1,1256 @@
+/*
+
+Version: 1.0
+Author: NEOVU DESIGN - Rodrigo Soliz Encinas
+*/
+
+@import "reset.css";
+@import "layout.css";
+@import "elements.css";
+ 
+
+
+/* Table of Contents
+==================================================
+    #@font-face
+    #Common Styles
+        #Tooltips
+    #Home Page
+        #Header Intro
+        #Navigation
+        #Secont Content
+    #Footer
+        #Social Icons
+    #Media Queries
+*/
+
+
+#formContact [novalidate="novalidate"] aside div[for="password"].error[generated=true] {background: #333; color: #888;font-size: 16px;padding: 41px 10px 42px;position: absolute;z-index: 20;right: 0;margin-top: 110px;}
+#formContact [novalidate="novalidate"] aside div[for="email"].error[generated=true] {background: #333; color: #888;font-size: 16px;padding: 45px 19px;position: absolute;z-index: 20;right: 0;margin-top: 0px;}
+ 
+
+/* #Structure Style
+================================================== */
+
+#contentOverFlow{
+    width:100%;
+    overflow:hidden;
+    position:relative;}
+
+body {
+    font-family:'SourceSansPro-Regular',Helvetica,Arial,sans-serif;
+    font-size:62.5%;
+    background-color: #fff;
+}
+
+/* #Common Styles
+================================================== */
+
+a, a:visited, a:active{
+    color: #221e1e;
+    text-decoration: none;
+    outline: none;}
+strong {font-weight: 900;
+}
+
+#siteThumbnail{
+    height: 1px;
+    width:1px;
+    display: block;
+    position: absolute;
+    left: -9999999px;
+    top: -99999px;
+}
+
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+::selection {background: #FFE503; /* Safari */}
+::-moz-selection {background: #FFE503; /* Firefox */}
+
+::-webkit-validation-bubble-message{
+    content: "Coloque um email válido";
+    color: #FFE503;
+    background: #333;
+    border-radius: 0px;-webkit-box-shadow: none;
+    text-transform: uppercase;
+}
+
+::-webkit-validation-bubble-arrow{background: #333;-webkit-box-shadow: none;}
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-thumb {background: #eee;}
+::-webkit-scrollbar-button {display: none;}
+::-webkit-scrollbar-track-piece {background: #888;}
+
+.oculto{display: none!important;}
+.mostra{bottom: 27px!important;}
+.white{background: #fff!important;}
+.gray{background: #646464!important;}
+.fontGray{color: #333!important;}
+.fontYellow{color: #FFE503!important;}
+
+/* #Navigation
+================================================== */
+.rotate{display: none;}
+header {
+    position: absolute;
+    z-index: 200;
+    background: transparent;
+    top:80px;
+    left: 0;
+    right: 0;
+}
+header > section:first-child{padding: 0.1% 0 0.2%;}
+
+header > section > nav{float: right!important;}
+
+header > section > nav li {
+    display: inline-block;
+    margin-right: 5.35%;
+}
+header > section > nav li a:hover p{color: #fff;}
+header > section > nav li:last-child { margin-right: 0;}	
+header > section > nav li p{
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    text-align:center;
+    color: #FFCF4A;
+}
+
+header > section > nav li a div {
+    background-image: url("../images/sprite-menu-main.png");
+    padding: 17px 20px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+header > section > nav li a div#iconLab{background-position: -291px 0;}
+header > section > nav li a div#iconMetodo{background-position: -40px 0;}
+header > section > nav li a div#iconServicos{background-position: -82px 0;}
+header > section > nav li a div#iconClientes{background-position: -124px 0;}
+header > section > nav li a div#iconOla{background-position: -166px 0;}
+/*#navigation li a div#back{background-position: -208px 0;}*/
+
+/*#navigation li a:hover div, #navigation li.acao a div{opacity: 1;}*/
+header > section > nav li a:hover div#iconLab{background-position:  -291px -39px;}
+header > section > nav li a:hover div#iconMetodo{background-position: -40px -40px;}
+header > section > nav li a:hover div#iconServicos{background-position:  -82px -40px;}
+header > section > nav li a:hover div#iconClientes{background-position:  -124px -39px;}
+header > section > nav li a:hover div#iconOla{background-position: -166px -38px;}
+/*#navigation li a:hover div#back{background-position: -208px -40px;}*/
+
+header > section > nav li.acao p{color: #fff;}
+/*#navigation li.acao a div#lab{background-position:  -291px -39px;}*/
+header > section > nav li.acao a div#iconMetodo{background-position: -40px -40px;}
+header > section > nav li.acao a div#iconServicos{background-position:  -82px -40px;}
+header > section > nav li.acao a div#iconClientes{background-position:  -124px -39px;}
+header > section > nav li.acao a div#iconOla{background-position: -166px -38px;}
+
+
+#cases{position: absolute;bottom:-14px;z-index:20;}
+aside.btClose{text-align: right;}
+aside.btClose img{
+    margin: 4% 2% 0.5% 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+aside.btClose img:hover{opacity:.8;}
+#cases nav ul li{
+    width: 33.33%;
+    display:inline-block;
+    margin:0;
+    float:left;
+    height:30px;
+    font-family: 'SourceSansPro-Bold';
+    font-size:1.2em;
+    padding: 0.4% .8% .5%;
+    cursor:pointer;
+    margin-bottom: 0.75%;
+    line-height: 1.7;
+    text-transform: uppercase;
+    background:#FFCF4A;
+    outline: 1px solid #FCBF15;
+}
+#cases nav ul li a{color: #333;}
+#cases nav ul li:nth-child(1){
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    margin-left: 0;
+}
+#cases nav ul li:nth-child(2){
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#cases nav ul li:nth-child(3){
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    border-right:0 solid;
+}
+
+#cases nav ul li:hover{background:#FCBF15;}
+
+#homePage > section:nth-child(2), #homePage > section:nth-child(3), #homePage > section:nth-child(4){position:absolute;z-index: 200;height:60%;bottom: -1000px;width: 100%;}
+#homePage > section:nth-child(2){
+    background:url(../images/servicos/omd2.jpg) #fff;
+    background-size: cover;
+}
+#homePage > section:nth-child(3){
+    background:url(../images/servicos/omd.jpg) #fff;
+    background-size: cover;
+}
+#homePage > section:nth-child(4){
+    background:url(../images/servicos/la-moda.jpg) #fff;
+    background-size: cover;
+    float: right;
+}
+/*#homePage > section:nth-child(3) article{
+    float: right;
+    padding-left: 10%;
+}*/
+
+#homePage > section:nth-child(2) article p,
+#homePage > section:nth-child(3) article p,
+#homePage > section:nth-child(4) article p{color: #fff;}
+#homePage > section:nth-child(2) h2,
+#homePage > section:nth-child(3) h2,
+#homePage > section:nth-child(4) h2{
+    font-size:3em;
+    font-family: 'SourceSansPro-Regular';
+    color:#fff;
+}
+
+
+/*#homePage > section:nth-child(3) article p,
+#homePage > section:nth-child(3) h2{
+    text-align: right;
+}*/
+
+
+/* #Blog, Savenergy icon Premium and Like button
+==================================================*/ 
+#premium{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out; 
+    -moz-transition: opacity 0.3s ease-in-out; 
+    -webkit-transition: opacity 0.3s ease-in-out; 
+    -o-transition: opacity 0.3s ease-in-out;
+}
+#premium:hover{opacity: 1;}
+#premium img{width: 85%;}
+
+
+#sidebar {
+    position: absolute;
+    right: -300px; 
+    top:180px; 
+    z-index: 100;}
+#sidebar div{
+    background:#fff;
+    margin-top: -29px;
+    border:1px solid #fff;
+}
+#sidebar #tumbo img{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0 solid rgb(215,215,215);
+    padding: 0;
+}
+#sidebar .tumbo-post{margin-top:0px;
+}
+#sidebar .tumbo-post .tumbo-title{
+    color:#333;
+    font-family: 'SourceSansPro-Bold';
+}
+#sidebar .tumbo-post p{
+    color:#999;
+    font-size: .95em;
+    font-family: 'SourceSansPro-Light';
+}
+#sidebar #tumbo-table td {
+font-family: "SourceSansPro-Light"!important;
+/* padding: 0px; */
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+width: 100%;
+line-height: 1.2;
+border-bottom: 1px solid #e2e2e2;
+}
+#sidebar .tumbo-post p a{
+    color:#999;
+    font-size: .95em;
+    font-family: 'SourceSansPro-Regular';
+    text-decoration:underline;
+}
+#sidebar a.tumbo-title-link, #sidebar .tumbo-post p a.tumbo-title-link{
+    color:#333!important;
+    font-family: 'SourceSansPro-Bold';
+    margin-bottom:10px;
+}
+#sidebar nav {
+    background:#333;
+    padding: 4px;
+    width:38px;
+    margin-left:-30px;
+    cursor: pointer;-webkit-transform: rotate(270deg);
+    transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+}
+#sidebar nav a {
+    color:#fff;
+    font-family: 'SourceSansPro-Light';
+    font-size: 1.3em;
+    text-transform: uppercase;
+    opacity: 1;
+}
+#sidebar nav a:hover{opacity: .8;}
+#sidebar nav img{
+    width: 100%;
+    padding:4px 0;
+}
+
+.likebtn-wrapper{
+    position: absolute!important;
+    right: -26px; 
+    top:140px; 
+    z-index: 100;
+}
+.lb-style-black .lb-like{
+    background: #333!important;
+}
+.lb-style-black .lb-like-icon {
+    background-image: url();
+}
+
+/***********************
+        -	CONTEUDO PRINCIPAL 	-
+**********************
+
+
+/* Primeiro Bloco - Inicio
+================================================== */
+/*Revisado*/
+
+#homePage{position:relative;background: #fff url("../images/lifestyle-beach.jpg");background-size:cover; background-attachment: fixed; overflow:hidden;background-position:bottom;
+}
+
+#homePage > section > article h1{
+    font-size: 7.2em;
+    font-family: 'SourceSansPro-Light';
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align:center;
+    color: #fff;
+    margin-top:43.5%;
+    opacity: 1;
+    text-shadow: 3px 3px 10px #555;
+}
+
+#homePage > section > article blockquote{
+    font-size: 1.9em;
+    font-family: 'SourceSansPro-Regular';
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    line-height: 1em;
+    text-align:center;
+    border-left: 0px solid #7B800D;
+    text-shadow: 2px 2px 4px #555;
+}
+#btMore {text-align:center;margin-top:9%!important;cursor:default;}
+#btMore img{width:14%;position:relative;cursor:pointer;}
+
+/*#home-bg a{margin-top:10%;}*/
+/*#home-bg a span.after {font-size:1.8em;font-family:SourceSansPro-Bold;vertical-align:middle;font-variant:normal;font-weight:normal;margin-left:20%;vertical-align: sub;}*/
+
+/*#btMenu{float:left;margin-top: 1%;}
+#btMenu img{width:4%;}*/
+
+#logo {
+    margin-top: 1%;
+    float: left;
+}
+#logo a {
+    opacity: 1;
+    transition:opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition:opacity 0.3s ease-in-out;
+    -o-transition:opacity 0.3s ease-in-out;
+}
+#logo a:hover{opacity: .8;}
+#logo img{width: 60%;}
+
+/* #Segundo Bloco - Metodologia
+================================================== */
+/*Revisado*/
+
+#metodologia{
+    background: url(../images/bg-metodo2.jpg);
+    border-top: 1px solid #FCBF15;
+    background-size:cover;
+    background-attachment:fixed;
+    position:relative;
+    background-position: bottom;
+    text-align: center;
+    padding: 0 0 15%;
+    text-shadow:3px 3px 10px #555;
+}
+#metodologia article {
+    text-align: right;
+    float:right;
+}
+#metodologia article p{
+    font-size: 1.8em; 
+    color: #fff;margin: 0 0 5%;
+    font-family: 'SourceSansPro-Regular';
+    line-height: 1.2;
+    padding-top: 0;
+    margin-top: 15px;
+    border-top: 0 solid;
+   
+}
+#metodologia article a{
+    display: block;
+    padding: 0 0 5%;
+    cursor: default;
+    text-align: right;
+}
+#metodologia article a img{
+    width: 10%;
+    cursor:pointer;
+}
+#metodologia  h2{
+    color: #fff;
+    font-size: 7em;
+    font-family: 'SourceSansPro-Light';
+    margin: 10% 0 0;
+    text-align: right;
+    text-transform:uppercase;
+    border-top:1px solid #FFCD03;
+    padding-top:20px;
+}
+#metodologia  h3{
+    font-size: 3.2em;
+    font-family: 'SourceSansPro-Light';
+    line-height: 0.6em;
+    color:#fff;
+    text-align: right;
+}
+
+/* #Terceiro Bloco - Metodologia 2
+================================================== */
+/*Revisado*/
+#metodologia2{
+    background: #f3f0eb;
+/*    border-top: 5px solid #FFCD03;*/
+    padding: 8% 0;
+    position: relative;
+    background-repeat: repeat;
+    text-align: left;}
+#metodologia2 section:first-child{margin-bottom:5.5%;}
+#metodologia2  figure{text-align: center;}
+#metodologia2 section:nth-child(2) section img{
+    width:60%;transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;}
+#metodologia2 section:nth-child(2) section:nth-child(1):hover img,
+#metodologia2 section:nth-child(2) section:nth-child(2):hover img,
+#metodologia2 section:nth-child(2) section:nth-child(3):hover img{
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);}
+#metodologia2  h2:first-child{font-family:'SourceSansPro-Light';font-size:4.8em;text-transform: uppercase;color: #333;line-height: .9;border-bottom: 1px solid #FFCD03;padding:0 0 2%;margin: 0 0 2%;}
+#metodologia2  h3{font-family:'SourceSansPro-Regular';font-size:2.2em;color: #333;line-height: .9;margin-top: 10%;}
+#metodologia2 section:nth-child(2) section p{padding-right: 8%;display: block;float: left;color: #888;}
+#metodologia2 li{color: #c2c2c2;font-size: 1.4em;line-height: 1.2;}
+#metodologia2 section:nth-child(1)  p{color: #888;}
+#metodologia2 ul{margin-bottom: 15px;}
+/* #Quarto Bloco - Sobre
+================================================== */
+/*Revisado*/
+
+#sobre{
+    background: #333 ;
+/*    border-top: 5px solid #FFCD03;*/
+    position: relative;
+    padding: 5% 0;
+}
+#sobre:before{
+	content: "";
+	position: absolute;
+	border-top: 20px solid #f3f0eb;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	top: 0;
+	right: 47.9%;
+}
+#sobre h2{
+    color:#fff;
+    font-size: 4.5em;
+    text-align: center;
+    font-family: 'SourceSansPro-Light';
+    text-transform: uppercase;
+}
+#sobre h3{
+    color:#777;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'SourceSansPro-Light';
+}
+#sobre h3 a{
+    color:#FCBF15;
+}
+#sobre h3 a:hover{text-decoration: underline;}
+#sobre ul{margin: 16% 0 8%;}
+#sobre ul li{
+    text-align: center;
+    border-radius:100px;
+    border: 2px solid #FCBF15;
+    width: 19.95em;
+    height: 19.9em;
+    margin-right: 5.3%;
+    display: inline-block;
+    background-size: 100%;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;}
+#sobre ul li:last-child{margin-right: 0;}
+#sobre ul li:nth-child(1){
+    background:url('../images/diegon.jpg');
+    background-size: 100%;}
+#sobre ul li:nth-child(2){
+    background:url('../images/franciscon.jpg');
+    background-size: 100%;}
+#sobre ul li:nth-child(3){
+    background:url('../images/gabon.jpg');
+    background-size: 100%;}
+#sobre ul li:nth-child(4){
+    background:url('../images/rodrigon.jpg');
+    background-size: 100%;}
+
+#sobre ul li img{
+    margin-top:29%;
+    width: 20%;
+    opacity: 0;
+    vertical-align: middle;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#sobre ul li h3{
+    opacity: 0;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#sobre ul li:hover img,
+#sobre ul li:hover h3{opacity: 1;}
+
+
+/* #Quinto Bloco - Servico
+================================================== */
+/*Revisado*/
+
+#servico {
+    padding: 8% 0 0;
+    background-color: #FFCF4A;
+    position: relative;
+/*    border-top:10px solid #4E4E4E;*/
+}
+#servico article.container{overflow:hidden;}
+#servico article ul{
+    width: 3840px;
+    list-style: none;
+    position: relative;
+}
+#servico article ul li,
+#servico nav ul li{
+    text-align: center;
+    display: inline;}
+#servico h2,
+#servico p{color:#333;}
+#servico h2{
+    text-transform: uppercase;
+    font-size: 8em;
+    padding: 4% 0 1%;
+}
+
+#servico nav{
+    padding: 8% 0 0;
+    position: relative;
+}
+#servico nav ul li{
+    cursor:pointer;
+    font-size: 2em;
+    margin-right: .8em;
+    padding: 1% 4%;
+    font-family:'SourceSansPro-Light';
+    text-transform: uppercase;
+    color:#FFCF4A;
+    background: #333;
+    width: 32%;
+    display:inline-block;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#servico nav ul li:hover{background: #4E4E4E;}
+#servico nav ul li:nth-child(3){margin-right: 0;}
+#servico article ul li:nth-child(1) h2{
+    font-size: 5.5em;
+    padding: 5% 0 0;
+    line-height: 1;
+    font-family:'SourceSansPro-Light';
+}
+#servico article ul li:nth-child(1) #destaque{
+    font-family:'Times New Roman Italic';
+    font-size: 2.5em;
+    margin-top: 40px;
+    padding: 0 10%;
+}
+#points{
+    font-family:'SourceSansPro-Bold';
+    font-size: 5em;
+    text-align: center;
+    line-height: .8em;
+}
+
+/* #Sexto Bloco - Comentarios
+================================================== */
+/*Revisado*/
+
+#comentarios{
+    height: 300px;
+    background: url('../images/descobrir.jpg');
+    background-size: cover;
+    background-position: 0 74%;
+}
+#comentarios:before{
+	content: "";
+	position: absolute;
+	border-top: 20px solid #FFCF4A;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	top: 0p;
+	right: 47.9%;
+}
+#comentarios article{
+    overflow: hidden;
+    padding-top: 5%;
+}
+#comentarios ul{
+    width: 3840px;
+    list-style: none;
+    position: relative;
+}
+#comentarios ul li{
+    text-align: center;
+    display: inline-block;
+}
+#comentarios ul li p{
+    color: #333;
+    font-size: 4em;
+    font-family: 'times new roman italic';
+}
+#comentarios ul li h4{
+    color: #333;
+    font-size: 2em;
+}
+
+/* #Sexto Bloco - Clientes
+================================================== */
+/*Revisado*/
+
+#clientes {
+    background-color: #222;
+    padding: 1% 0 5%;
+    position:relative;
+}
+#clientes h2{
+    color: #444;
+    font-family: "SourceSansPro-Bold";
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+#clientes section  hr{border: dotted 0.1em #444;}
+#clientes > section{padding-top: 5%;}
+#clientes > section > section {
+    padding: 5% 0 6%;
+    text-align: center;
+}
+#clientes a img{
+    width: 51%;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#clientes a:hover img{opacity:.5;}
+
+#clientes section > section:nth-child(1) {
+    padding: 5% 0 6%;
+    text-align: center;
+}
+
+
+/* #Setimo Bloco - Contato
+================================================== */
+
+#contato {position:relative;overflow: hidden;}
+#map_canvas{ position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+#contato .container{top: -79%;background-color:transparent;z-index: 199;}
+
+#titleContact {padding-top: 6.5%;}
+#titleContact h2{font-size: 115px;font-family: 'SourceSansPro-Bold';text-transform: uppercase;letter-spacing: .5px;color: #333;}
+
+#contato p{text-align: left;color: #333;font-family: 'SourceSansPro-Light';font-size: 1.8em;line-height: 1em;}
+
+#formContact input[type="text"],input[type="email"], textarea {
+    font-family: 'SourceSansPro-Light';
+    font-size: 24px;
+    color:#888;
+    background-color: #fff;
+    border:solid 1px #fff;
+    float: left;
+    min-width: 87%;
+    padding: 10px;
+    margin: 5px 0px 0px 51px;
+    outline: none;
+    text-transform: uppercase;
+}
+#nome,
+#email{opacity:0;}
+
+#formContact input[type="text"]:focus,#formContact input[type="email"]:focus, #formContact textarea:focus {border: solid  1px #fff;font-size: 24px;}
+#formContact textarea {height: 53px;overflow: auto;margin:0;}/*Para Internet Explorer */
+
+#submit {
+    font-family: 'SourceSansPro-Bold';
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: #333;
+    border-color: #333;
+    color: #FFE503;
+    letter-spacing: .15em;
+    float: left;
+    margin: 0;
+    width:53px;
+    height:53px;
+    border-style: solid;
+    border-width: 0px;
+    padding: 5px 6px;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+#submit:hover {
+    background-color: #FFE503;
+    border-color: #333;
+    color:#333;
+}
+
+#olaIcon {
+    font-family: 'SourceSansPro-Bold';
+    text-transform: uppercase;
+    background-size: 45px 45px;
+    background-image:url('../images/menu-contact-bk.png');
+    background-position:5px 7px;
+    background-color:#FFCF4A;
+    border-color: #FFCF4A;
+    width:53px;
+    height:53px;
+    letter-spacing: .15em;
+    float: left;
+    margin: 0;
+    border-style: solid;
+    border-width: 0px;
+    padding: 5px 10px;
+    transition: 0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+
+::-webkit-input-placeholder { font-family: 'SourceSansPro-Light'; font-size: 15px;color:#333; }
+::-moz-placeholder { font-family: 'SourceSansPro-Light'; font-size: 15px;color:#333; } 
+:-ms-input-placeholder { font-family: 'SourceSansPro-Light'; font-size: 15px;color:#333; } 
+
+#contato section.one-third {margin: 17% 1% 0;padding: 1.5% 5%;background: url(../images/mapa.png) no-repeat; background-size: 95% 95%; width: 300px;height: 440px;}
+#contato section.one-third  h5{font-family: 'SourceSansPro-Light';font-size: 1.4em;text-transform: uppercase;text-align: left;font-variant: normal;font-weight: normal;transition: 0.5s ease-in-out;
+                               -moz-transition:  0.5s ease-in-out;
+                               -webkit-transition: 0.5s ease-in-out;
+                               -o-transition: 0.5s ease-in-out;}
+#contato section.one-third  h5:hover{color:#777;}
+
+
+/* #Oitavo Bloco - Footer
+================================================== */
+
+footer {
+    background:url(../images/bg-metodo.png) #fff;
+    position:relative;
+}
+footer h2{
+    text-align: center;
+    font-size: 70px;
+    color: #555;
+    margin: 7% 0 10%;
+}		
+address{
+    background:#FFCF4A;
+    text-align: center;
+    font-size: 2em; 
+    font-size:2.2em;
+    line-height: 1.5em;
+    margin-bottom: 2%;
+    margin-top: 0;
+    font-family: 'SourceSansPro-Light';
+    padding: .3%;
+}
+address span:nth-child(1){text-align: left;}
+address span:nth-child(2){text-align: center;}
+address span:nth-child(3){text-align: right;}
+#copyright{
+    margin: 2% 0 0;
+    background: #666;
+}
+#copyright section article:nth-child(1){
+    float: left;
+}
+#copyright section article:nth-child(2){
+    position: relative;
+    float: right;
+}
+#copyright article p{
+    text-align: left;
+    margin: 0;
+    color: #fff;
+    font-size: 1.4em;
+    padding: .5%;
+    margin-top: 6%;
+}
+footer section:nth-child(2) p{
+    text-align: center;
+}
+
+#copyright section article ul{
+    text-align: right;
+    margin: 5% 0;
+}
+
+#copyright section article ul li{
+    display: inline;
+    margin: .5% 0 .5% 3%;
+    
+}
+
+
+/* Social Icons
+===================================================*/
+
+#facebook,
+#google,
+#instagram{
+    opacity:0.8;
+    transition: 0.3s ease-in-out;
+    -moz-transition:  0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+#facebook:hover,
+#google:hover,
+#instagram:hover{opacity: 1;}
+
+#facebook img,
+#google img,
+#instagram img{
+    width: 15%;
+    padding: 0 0;}
+
+/*#facebook{text-align: right;}
+#google{text-align: left;}
+#instagram{text-align: center;}*/
+
+/***********************
+        -	CONTEUDO LAB 	-
+**********************
+
+/* Lab 
+===================================================*/
+#labContent{background: url('../images/bg-lab3.jpg');
+            background-size: cover;
+            background-position: top;
+}
+#labContent header{position: relative;top:0;}
+#labContent header h2, 
+#labContent header h3{
+    color:#fff;
+    font-family: 'SourceSansPro-Regular';
+}
+#labContent header h2{
+    font-size: 5.9em;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+    border-bottom:1px solid #fff;
+}
+#labContent header h2 img{vertical-align: top;}
+#labContent header h3{
+    font-size: 2.5em; 
+    text-align: right;
+}
+
+#project  article{
+    text-align: center;
+    padding: 2%;
+}
+#project  article img{width: 100%;}
+#project article:nth-child(1){background:#333;}
+
+/*========== Media Queries ==========*/
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    
+    /* Menu */
+    #logo {
+        margin: 2% 0 2%;
+        text-align: center;
+        width: 40%;
+    }
+    #logo img{
+        text-align: left;
+    }
+    header > section > nav{
+        width: 280px!important;
+        margin-top: 4px;
+    }
+    
+    /*Home Page */
+    #homePage > section > article h1 {
+        font-size: 6.2em;
+        margin-top: 68.5%;
+        line-height: 0.9;
+    }
+    
+    /*Sidebar */
+    #sidebar{display: none;}
+    
+    /* Metodologia */
+    #metodologia{padding: 0 0 12%;}
+    #metodologia h2{
+        font-size:8em;
+        padding: 0 5%;
+    }
+    #metodologia h3{
+        font-size:3em;
+        padding: 0 5%;
+    }
+    #metodologia article p{
+        padding: 0 7%;
+        line-height: 1;
+    }
+    
+    /* Sobre */
+    #sobre h2{
+        font-size: 4em;
+        line-height: 1;
+    }
+    #sobre ul{
+        padding: 0 5%;
+    }
+    #sobre ul li{
+        width: 14.25em;
+        height: 14.25em;
+    }
+    
+    /* Servicos */
+    #servico article ul li:nth-child(1) h2{padding:15% 0 0;}
+    #servico h2{font-size:7.6em;}
+    #servico nav ul{padding: 0 5%;}
+    #servico nav ul li{
+        width: 31.5%;
+    }
+    /* clientes */
+    #clientes a img {width: 68%;}
+    /* Contato */
+  #contato {padding-bottom: 115%;}
+    /* footer */
+ 
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body{background-color: #333;}
+    .rotate{display: block;padding: 15% 5%;text-align: center;}
+    .rotate h4{color: #666;font-size: 1.6em;font-family: 'SourceSansPro-Regular'!important;line-height: 1.2;}
+    /* Menu */
+    header{display: none;}
+    /*Sidebar */
+    #sidebar {display: none;}
+    /* Top */
+    #homePage{display: none;}
+    /* Metodologia */
+    #metodologia{display: none;}
+    #metodologia2{display: none;}
+    #sobre{display: none;}
+    /* Servicos */
+    #servico {display: none;}
+    /* Parceiros */
+    #clientes {display: none;}
+    /* Contato */
+    #contato{display: none;}
+    /* footer */
+    footer{display: none;}
+}
+
+/* Mobile Portrait Size */
+@media only screen and (max-width: 479px) {	
+    /* mobile 480x320: esconde conteudo mobile 480x320 */
+    .oculto{display: none;}
+
+    /* Menu: nevegacao global */
+    header > section:first-child{
+        left:0;
+        padding: 0 0 0 0;
+    }
+    header > section > nav{padding-left: 4%;}
+    
+    #logo {
+        margin: 2% 0 2%;
+        text-align: center;
+    }
+    #logo img{width: 50%;}
+    
+    header > section > nav li a:hover div{
+        background-image: url("../images/sprite-menu-main.png");
+        padding: 17px 20px; 
+        background-repeat: no-repeat;
+        opacity: 1;
+    }
+    header > section > nav ul li.acao p{color: #fff;}
+    header > section > nav li.acao a div{
+        background-image: url("../images/sprite-menu-main.png");
+        opacity: 1;
+    }
+    header > section > nav li.acao a div#iconLab{background-position: 0 -40px;}
+    header > section > nav li.acao a div#iconMetodo{background-position: -40px -40px;}
+    header > section > nav li.acao a div#iconServico{background-position:  -82px -40px;}
+    header > section > nav li.acao a div#iconClientes{background-position:  -124px -39px;}
+    header > section > nav li.acao a div#iconOla{background-position: -166px -38px;}
+
+    /*Sidebar */
+    #sidebar {display: none;}
+    /* Home Page */
+    #homePage{padding: 55% 0 0%;
+              background-size:250% 100%;
+              background-position: 40% 0%;
+              overflow: hidden;
+    }
+    #homePage  article  h1{
+        font-size: 4em!important;
+        text-align:center;
+        margin-top: 12.5%!important;
+        line-height: .8em;
+    
+   }
+    #homePage blockquote{
+        font-size: 1.4em;
+        line-height: 1em;
+        text-align:center;
+        padding: 0 0 4%; 
+        border-width: 0;
+    }
+    #cases {bottom: -3px;}
+    #cases ul li{
+        font-size: 1em!important
+        ;padding: 3% .8% .1%!important;
+    }
+    #homePage > section:nth-child(2),
+    #homePage > section:nth-child(3),
+    #homePage > section:nth-child(4){
+        text-align: center;
+        background-position: 30% 50%;
+    }
+    
+    #homePage > section:nth-child(2) h2,
+    #homePage > section:nth-child(3) h2,
+    #homePage > section:nth-child(4) h2{font-size:4.7em;text-align: left;
+    }
+    
+    #homePage > section:nth-child(2) p,
+    #homePage > section:nth-child(3) p,
+    #homePage > section:nth-child(4) p{text-align: left;padding-right: 110px;
+    }
+    
+    #homePage > section:nth-child(2) a,
+    #homePage > section:nth-child(3) a,
+    #homePage > section:nth-child(4) a{display: none;
+    }
+    
+    #homePage > section:nth-child(2) img,
+    #homePage > section:nth-child(3) img,
+    #homePage > section:nth-child(4) img{width: 7%;margin-top: 40px;
+    }
+    
+    #homePage > section:nth-child(2) figure img{width: 50%;margin: 10% 0 0;}
+    #homePage > section:nth-child(3) figure img{width: 63%;margin: 15% 0 0;}
+    #homePage > section:nth-child(4) figure img{width: 73%;}
+    
+    
+    /* Metodologia */
+    #metodologia  h2{
+        font-size: 5em;
+        text-align: center;
+        margin-top:130px;
+    }
+    #metodologia  h3{
+        font-size: 2em;
+        text-align: center;
+    }
+    #metodologia article p {
+        text-align: center;
+        font-size: 1.4em;
+    } 
+    #metodologia article a {text-align: center;} 
+    #metodologia  article{
+        margin-top: 0;
+        text-align: center;
+    }
+    #metodologia article a img{
+        width: 15%;
+        margin-top: 30px;
+    }
+    
+    /* Metodologia 2 */
+    #metodologia2 h2 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 20px;
+    }
+    #metodologia2 h3 {
+        font-size: 1.4em;
+        text-align: center;
+        margin-top: 38px;
+        display: block;
+    }
+    #metodologia2 #wrapMob {
+        background-size: 67%;
+        background-position: center top;
+        height: 44.3em;
+    }
+    #metodologia2 #wrapMob article ul {width: 74%;}
+    #metodologia2 #wrapMob article ul li{;background-size: 100%!important;width: 80%;height: 29em;margin-left:27.6%;}
+    #metodologia2 #wrapMob article {height: 29em;top: 27.2px;}
+    #metodologia2 .two-thirds {display:none;}
+    
+    /* Sobre */
+    #sobre{background-size: 0.3%;}
+    #sobre ul li{width: 6.1em;height: 6.1em;}
+    #sobre ul li img {margin-right: 4.3%;}
+    #sobre ul li h3 {
+        font-size: 1.5em;
+        margin-top:6px;
+    }
+    #sobre h2 {
+        font-size: 3em;
+        line-height: 0.9;
+    }
+    #sobre h3 {
+        font-size: 1.9em;
+        line-height: 0.9;
+    }
+    
+    /* Clientes */
+    #clientes {padding:13% 0 15%;}
+    
+    /* Servicos */
+    #servico {padding: 10% 0 10%;}
+    #servico article ul li:nth-child(1) h2 {
+        font-size: 3em;
+        padding: 2% 0 0;
+        line-height: 1;
+    }
+    #servico article ul li:nth-child(1) #destaque {
+        font-size: 1.8em;
+        margin-top: 40px;
+        padding: 0 2%;
+        font-family: 'Times New Roman';
+    }
+    #servico nav {padding-top: 5%;}
+    #servico h2 {
+        font-size: 3em;
+        padding: 4% 0 1%;
+    }
+    #servico p {font-size: 1.4em;}
+    #servico nav ul li {
+        font-size: 1.2em;
+        margin-right: .5em;
+        width: 31.2%;
+        padding: 2% 0;
+    }
+    #points {font-size: 2.8em;}
+    
+    /* Contato */
+    #formContact {padding:0 0 45px 15px;}
+    #formContact input[type="text"],input[type="email"], textarea {width: 80%;min-width: 50%;height: 32px!important;margin: 0 0 8px 0!important;font-size: 1.5em;line-height: 1;padding:7px 10px;}
+    #submit {letter-spacing: 0.05em;}
+    #olaIcon{background-position: -1px 0px;background-size: 35px 35px;}
+    #olaIcon,#submit{width: 32px;height: 32px;padding: 5px 5px;margin-bottom: 49px;}
+
+    /* Footer */
+    #social{padding: 4% 0;}
+    #copyright{text-align: center;margin: 3% 0 0;padding: 3% 0;}
+    address{margin-bottom: 3%;line-height: 1;padding: 2% 0;}
+    address span{margin:1% 0 1%!important;text-align: center!important;font-size: .5em;width: 33%!important;}
+    div#facebook,div#google,div#instagram{text-align: center;width: 33.3%;}
+    div#facebook img,div#google img,div#instagram img{width: 33%;}
+
+}
+
+
+/* Targets Retina Enabled Devices */
+/*@media 
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (   -moz-min-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+  
+  
+ #navigation li.active { background: url('img/nav-arrow@2x.png') no-repeat bottom center; -webkit-background-size: 16px 7px; -moz-background-size: 16px 7px; background-size: 16px 7px; }
+ #navigation li.drop:hover { background: url('img/nav-drop@2x.png') no-repeat bottom center; -webkit-background-size: 11px 20px; -moz-background-size: 11px 20px; background-size: 11px 20px; }
+ 
+ #services .list-one h4 { background: url('img/lightning@2x.png') no-repeat top left; -webkit-background-size: 16px 16px; -moz-background-size: 16px 16px; background-size: 16px 16px; }
+ #services .list-two h4 { background: url('img/lightbulb@2x.png') no-repeat top left; -webkit-background-size: 16px 16px; -moz-background-size: 16px 16px; background-size: 16px 16px; }
+ #services .list-three h4 { background: url('img/coffeecup@2x.png') no-repeat top left; -webkit-background-size: 16px 16px; -moz-background-size: 16px 16px; background-size: 16px 16px; }
+ .showcase-entry { padding-bottom: 0; }
+
+}		*/	
+
