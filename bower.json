@@ -1,0 +1,18 @@
+{
+    "name": "NEOVU.IO",
+    "description": "NEOVU.IO",
+    "version": "1.0.1",
+    "homepage": "https://github.com/Neovu",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "jquery": "latest",
+        "bootstrap": "latest",
+        "pace": "latest",
+        "scrollspy": "latest",
+        "jquery-i18n-properties": "latest",
+        "font-awesome": "latest",
+        "chartjs": "latest",
+        "jquery.browser": "latest"
+    }
+} 
