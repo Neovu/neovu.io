@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'SourceSansPro-Bold';
-    src:  url('../font/SourceSansPro-Bold.ttf') format('opentype');
+    src:  url('../fonts/SourceSansPro-Bold.ttf') format('opentype');
     font-variant: normal;
     font-weight: normal;
     font-style: normal;
@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: 'SourceSansPro-Regular';
-    src:  url('../font/SourceSansPro-Regular.ttf') format('opentype');
+    src:  url('../fonts/SourceSansPro-Regular.ttf') format('opentype');
     font-variant: normal;
     font-weight: normal;
     font-style: normal;
@@ -37,7 +37,7 @@
 
 @font-face {
     font-family: 'SourceSansPro-Light';
-    src:  url('../font/SourceSansPro-Light.ttf') format('opentype');
+    src:  url('../fonts/SourceSansPro-Light.ttf') format('opentype');
     font-variant: normal;
     font-weight: normal;
     font-style: normal;
