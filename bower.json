@@ -13,6 +13,9 @@
         "jquery-i18n-properties": "latest",
         "font-awesome": "latest",
         "chartjs": "latest",
-        "jquery.browser": "latest"
+        "jquery.browser": "latest",
+        "material-design-lite": "latest" 
+        
+        
     }
 } 
