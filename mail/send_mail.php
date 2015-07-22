@@ -17,12 +17,12 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
 
             $subject = 'From: ' . $email . ' : ' . $subject;
             if (mail($to, $subject, $message, 'From: ' . $from)) {
-                echo 'success|Obrigado, ' . $name . '. Retornaremos em assim que possível.';
+                echo 'success|Obrigado, ' . $name . '. Obrigado por enviar sua mensagem.';
             } else {
                 echo 'error|Opa, ' . $name . ' aconteceu algum problema no envio. Tente direto pelo email contato@neovu.com.br!';
             }
         } else {
-            echo 'error|Por favor, ' . $name . ' todos os campos necessários.';
+            echo 'error|Por favor, ' . $name . ' todos os campos são necessários.';
         }
         return;
     }
