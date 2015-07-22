@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Neovu®</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Neovu Design e Tecnologia">
+        <meta name="google-site-verification" content="_yMtoXTRdRGS0QIpTsYj8vA6_XaniivKC5ZchJQw_A8" />
+        <link rel="shortcut icon" href="http://savehome.neovu.io/img/favicon.png">  
+        <link href="bower_components/pace/themes/white/pace-theme-minimal.css" rel="stylesheet" type="text/css"/>
+        <script src="bower_components/pace/pace.min.js" type="text/javascript"></script> 
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/> 
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="http://savehome.neovu.io/css/app.css" rel="stylesheet"> 
+        <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>   
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="bower_components/jquery-i18n-properties/jquery.i18n.properties.js" type="text/javascript"></script>  
+        <script src="bower_components/scrollspy/jquery.scrollspy.min.js" type="text/javascript"></script>
+        <script src="bower_components/hammerjs/hammer.min.js" type="text/javascript"></script>
+       
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> 
+        <script src="http://savehome.neovu.io/js/app.js"></script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-40632331-3', 'auto');
+            ga('send', 'pageview');
+
+            function loadBundles(lang) {
+                $.i18n.properties({
+                    name: 'Messages',
+                    path: 'bundle/',
+                    mode: 'both',
+                    language: lang,
+                    callback: function () {
+                        $.get("bundle/Messages.properties", function (data) {
+                            var items = data.split('\n');
+                            $(items).each(function (index, element) {
+                                var ele = element.split('=');
+                                if (ele.length > 1)
+                                    $("." + ele[0]).text(ele[1]);
+
+                            });
+                        });
+                    }
+                });
+            }
+
+            loadBundles($.i18n.browserLang());
+        </script>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]--> 
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-nav" data-offset="89">
+
+        <div class="navbar-wrapper" id="saveNav">
+            <div class="container">
+
+                <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#saveNav"><img src="http://www.savehome.neovu.io/img/neovu-logotipo.svg"/></a>
+                        </div>
+                        <div class="navbar-collapse collapse" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li ><a href="#benefits" class="msg_overview_nav">Serviços</a></li>
+                                <li><a href="#savehome" class="msg_products_nav">Savehome</a></li>
+                                 <li><a href="#contact" class="msg_contact_nav">Contato</a></li>
+                                <li><a href="http://www.blog.neovu.io" target="blank" class="msg_blog_nav">Blog</a></li>
+                               
+<!--                                <li><a href="http://savehome.neovu.io/saveplug.html"  onClick="ga('send', 'event', {eventCategory: 'Nav', eventAction: 'Nav-Store', eventLabel: 'GoToStore'});"><i class="fa fa-shopping-cart"></i></a></li>-->
+
+                                <!--                                <li class="active"><a href="http://savebox.neovu.io" class="msg_login_nav" onClick="ga('send', 'event', {eventCategory: 'NAV', eventAction: 'Nav-Login', eventLabel: 'GoToLogin'});">Login</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section id="banner" >
+
+            <div class="container padding-top-70 padding-bottom-70">
+
+                <div class="col-md-6 text-left">
+
+
+
+                    <h1 class="padding-top-70 msg_title_banner text-uppercase">Inovamos com as pessoas e para as pessoas</h1>
+                    <p class="msg_subtitle_banner">Design e tecnologia unidos para criar experiências digitais e físicas criativas e elegantes.</p>
+                    <p class="padding-top-50"><a href="#benefits" class="btn btn-xl btn-default-inverse-bk"><span class="msg_btn_banner">conheça nossos serviços </span></a></p>
+
+                    <!--                            <p><a class="btn btn-xl btn-default msg_btn_banner_1" href="saveplug.html" role="button">BUY NOW!</a></p>-->
+
+                </div>
+                <div class="col-md-6">
+                    <img src="http://savehome.neovu.io/img/bg-banner-neovu.svg" class="img-responsive"/>
+                </div>
+
+            </div>
+
+        </section>  
+        <section id="benefits" class="padding-bottom-70 padding-top-70 gray4 text-center">
+            <article class="container">
+                <h2 class="msg_title_service featurette-heading padding-bottom-50"><span>Seus clientes criarão</span><br><span class="text-muted">Uma relação emocional com seu produto</span></h2>
+
+                <div class="col-lg-4 padding-top-50 rose padding-bottom-30 economy">
+                    <img class="img-economy" src="http://www.savehome.neovu.io/img/ic-design-over.svg" alt="Generic placeholder image">
+                    <img class="img-economy-over" src="http://www.savehome.neovu.io/img/ic-design.svg" alt="benficios do conforto e seguranca de se usar o Neovu® Saveplug">
+                    <h2 class="msg_title_col_service_1">Ux e design de produto</h2>
+
+                    <p class="msg_content_col_service_1">Projetamos <strong>produtos simples, estéticos e fáceis de usar</strong>, que garantem o melhor retorno para seu negócio.</p>
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 padding-top-50 padding-bottom-30 comfort">
+                    <img class="img-comfort" src="http://www.savehome.neovu.io/img/ic-app-over.svg" alt="benficios do conforto e seguranca de se usar o Neovu® Saveplug">
+                    <img class="img-comfort-over" src="http://www.savehome.neovu.io/img/ic-app.svg" alt="benficios do conforto e seguranca de se usar o Neovu® Saveplug">
+                    <h2 class="msg_title_col_service_2">Aplicativos web e mobile</h2>
+                    <p class="msg_content_col_service_2">Desenvolvemos <strong>aplicativos web e mobile elegantes</strong> com o objetivo de comunicar e diferenciar sua empresa.</p>
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-lg-4 padding-top-50 padding-bottom-30 security">
+                    <img class="img-security" src="http://www.savehome.neovu.io/img/ic-strategy-over.svg" alt="benficios do conforto e seguranca de se usar o Neovu® Saveplug">
+                    <img class="img-security-over" src="http://www.savehome.neovu.io/img/ic-strategy.svg" alt="benficios do conforto e seguranca de se usar o Neovu® Saveplug">
+                    <h2 class="msg_title_col_service_3">Planejamento estratégico</h2>
+                    <!--                    <h2>Really save energy in a fun way</h2>-->
+                    <p class="msg_content_col_service_3">Prestamos <strong>consultoria em design e tecnologia</strong> adaptado  às necessidades reais de sua empresa.</p>
+                    <!--  <p><a class="btn btn-default" href="#" role="button">Veja mais &raquo;</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+            </article>
+        </section> 
+        <section class="text-center" id="savehome">
+            <h2 class="section-heading padding-top-50 padding-bottom-30 msg_heading_video">Aprendemos muito com nossos clientes. Nosso produto savehome é um fruto disso. </h2>
+           <p class="padding-bottom-50"><a href="http://www.savehome.neovu.io" class="btn btn-xl btn-default-inverse-bk" target="blank"><span class="msg_btn_banner">Dê uma espiada </span></a></p>
+            <!--                        <a href="#video-save" class="margin-top-50"><i class="fa fa-angle-down"></i></a>-->
+             <article class="bg-primary value6 col-md-4">
+
+                <div class="text-left padding-left-20">
+                    <!--                        <h2 class="section-heading padding-top-70 msg_heading_video"> </h2>
+                                            <a href="#video-save" class="margin-top-50"><i class="fa fa-angle-down"></i></a>-->
+                </div>
+
+            </article>
+            <article class="bg-primary value4 col-md-4">
+
+                <div class="text-left padding-left-20">
+                    <!--                        <h2 class="section-heading padding-top-70 msg_heading_video"> </h2>
+                                            <a href="#video-save" class="margin-top-50"><i class="fa fa-angle-down"></i></a>-->
+                </div>
+
+            </article> 
+            <article class="bg-primary value3 col-md-4">
+
+                <div class="text-left padding-left-20">
+                    <!--                        <h2 class="section-heading padding-top-70 msg_heading_video"> </h2>
+                                            <a href="#video-save" class="margin-top-50"><i class="fa fa-angle-down"></i></a>-->
+                </div>
+
+            </article> 
+        </section>  
+
+        <div class="marketing">
+            <!-- START THE FEATURETTES -->
+
+            <!--            <div class="full gray padding-top-50 padding-bottom-50 hidden" id="saveflow">
+                            <div class="container featurette">
+                                <div class="col-md-12">
+                                    <h2 class="featurette-heading space-left">SaveFlow <a href="#savebox" class="pull-right close-saveflow"><span>X</span></a></h2>
+                                    <p class="lead">Connect the saveflow in any water pipe or gas and further reduce your household budget.</p>
+                                </div>
+            
+                                <div class="col-md-6 padding-top-30">
+                                    <img class="featurette-image img-responsive" src="img/sketch-saveflow.svg" alt="Generic placeholder image">
+                                </div>
+            
+                            </div>
+            
+                        </div>-->
+
+
+            <!-- /END THE FEATURETTES -->
+            <!--            <section class="bg-primary value">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="text-right">
+                                        <h2 class="section-heading">Start save up energy, now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>-->
+            <section id="clientes" class="full gray padding-top-70 padding-bottom-70 text-center">
+                <section class="container ">
+                    <h2 class="msg_subtitle_service padding-bottom-70 padding-top-70 featurette-heading"><span>Trabalhamos para marcas de todos os tamanhos,</span> <br><span class="text-muted"> Com a mesma paixão e dedicação.</span></h2>
+                    <div class="row padding-top-70">
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://www.linkedin.com/company/la-moda" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/logo-lamoda.png" alt="La Moda."  width="153" height="128">
+                                </a>
+                            </section>
+                        </section>
+                        <!--                    <section class="col-md-4 padding-bottom-50">
+                                                <section>
+                                                    <a href="#clientes" target="blank">
+                                                        <img src="http://www.savehome.neovu.io/img/parceiros/logo-guigoo.png" alt="Guigoo Crowd Funding. Florianópolis" class="lazy" data-original="images/parceiros/logo-guigoo.png" width="153" height="128"  style="display: inline;">
+                                                    </a>
+                                                </section>
+                                            </section>-->
+
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://www.omd.com.br" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/logo-omd.png" alt="Sistema Informatizado para Gestão de Ouvidorias"  width="153" height="128"/>
+                                </a>
+                            </section>
+                        </section>
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://decanhota.com.br" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/decanhota.png" alt="DeCanhota." width="153" height="128" />
+                                </a>
+                            </section>
+                        </section>
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://emprenext.com" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/emprenext-logo.svg" alt="Logotipo Emprenext" width="153" height="128"  />
+                                </a>
+                            </section>
+                        </section>
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://infosystem.com" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/infosystem-logo.svg" alt="Logotipo Infosystem"  width="153" height="128"  />
+                                </a>
+                            </section>
+                        </section>
+                        <section class="col-md-4 padding-bottom-50">
+                            <section>
+                                <a href="http://saidavip.com" target="blank">
+                                    <img src="http://www.savehome.neovu.io/img/parceiros/saida-logo.svg" alt="Logotipo Infosystem"  width="153" height="128"  />
+                                </a>
+                            </section>
+                        </section>
+                    </div>
+                </section>
+                                <section class="container">
+                                    <h2>Parceiros</h2>
+                                    <hr>
+                                    <section class="col-md-3">
+                                        <section>
+                                            <a href="http://www.cognisense.com.br/" target="blank">
+                                                <img src="http://www.savehome.neovu.io/img/parceiros/logo-cog.png" alt="Cognisense" class="lazy" data-original="images/parceiros/logo-cog.png" width="153" height="128" />
+                                            </a>
+                                        </section>
+                                    </section>
+                              <section class="col-md-3">
+                                        <section>
+                                            <a href="http://www.exactsales.com.br/" target="blank">
+                                                <img src="http://www.savehome.neovu.io/img/parceiros/logo-exact.png" alt="Sinapse da Inovação. Florianópolis" class="lazy" data-original="images/parceiros/logo-sinapse.png" width="153"  >
+                                            </a>
+                                        </section>
+                                    </section>
+                                       <section class="col-md-3">
+                                        <section>
+                                            <a href="http://logicae.com.br/" target="blank">
+                                                <img src="http://www.savehome.neovu.io/img/parceiros/logo-logica.png" alt="Chag. Florianópolis" class="lazy" data-original="images/parceiros/logo-chag.png" width="153" >
+                                            </a>
+                                        </section>
+                                    </section>
+                                </section>
+            </section>
+            <div class="gray2 padding-top-70 padding-bottom-70" id="savebox">
+                <div class="container featurette text-center">
+                    <div class="padding-top-50">
+                        <h2 class="featurette-heading"><span class="msg_title_works">Trabalhe na Neovu.</span> <br><span class="text-muted msg_subtitle_works">Buscamos por você</span></h2>
+                        <p class="lead">Buscamos por talentos que queiram fazer a diferença no desenvolvimento de experiências digitais e físicas.</p>
+                        <!--                        <p><a class="btn btn-xl btn-default open-saveflow " href="#saveflow" role="button"><i class="fa fa-plus"> </i> Products</a></p>-->
+                    </div>
+                    <div class="row padding-bottom-70 text-center">
+                        <div class="col-md-3">
+                            <img  src="http://www.savehome.neovu.io/img/ic-strategy.svg" alt="Generic placeholder image">
+                            <h2 class="msg_title_col_service_1">Designer</h2>
+
+                            <p class="msg_content_col_service_1">Não há vagas no momento</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img  src="http://www.savehome.neovu.io/img/ic-strategy.svg" alt="Generic placeholder image">
+                            <h2 class="msg_title_col_service_1">Software engineer</h2>
+
+                            <p class="msg_content_col_service_1">Não há vagas no momento</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img  src="http://www.savehome.neovu.io/img/ic-strategy.svg" alt="Generic placeholder image">
+                            <h2 class="msg_title_col_service_1">Suporte</h2>
+
+                            <p class="msg_content_col_service_1">Não há vagas no momento</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img  src="http://www.savehome.neovu.io/img/ic-strategy.svg" alt="Generic placeholder image">
+                            <h2 class="msg_title_col_service_1">Estágio</h2>
+
+                            <p class="msg_content_col_service_1">Não há vagas no momento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- CONTACT -->
+        <div class="padding-bottom-50 padding-top-70" id="contact">
+            <div id="contact_map">
+                <section id="map_canvas"></section>
+            </div>
+            <div class="container featurette">
+                <!--                <div class="col-md-12 text-center padding-bottom-50">
+                                    <h2 class="featurette-heading msg_text_contact padding-bottom-30"> </h2>
+                                    <ul class="list-inline support">
+                                        <li class="col-md-4"><a href="manuals.html" target="blank" class="text-center tutorial"><img src="http://www.savehome.neovu.io/img/tutorial.svg" class="img-tutorial"/><img src="http://www.savehome.neovu.io/img/tutorial-over.svg" class="img-tutorial-over"/></a>
+                                        </li>
+                                        <li class="col-md-4"><a href="api.html" target="blank" class="text-center api"><img src="http://www.savehome.neovu.io/img/api.svg" class="img-api"/><img src="http://www.savehome.neovu.io/img/api-over.svg"  class="img-api-over"/></a>
+                                        </li>
+                                        <li class="col-md-4"><a href="blog.html" target="blank" class="text-center blog"><img src="http://www.savehome.neovu.io/img/download.svg" class="img-blog"/><img src="http://www.savehome.neovu.io/img/download-over.svg" class="img-blog-over"></a>
+                                    </ul>
+                                </div>-->
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="featurette-heading msg_tittle_contact_us">Fale conosco</h2>
+                    <p class="lead msg_text_contact_us_2">Para saber mais sobre os serviços e produtos da Neovu, por favor, nos envie uma mensagem.</p>
+                    <!-- BEGIN FORM-->
+                    <form action="" id="contact-form" class="default-form contact-form" role="form">
+                        <div class="form-group">
+                            <!--      <label for="name">Name</label>-->
+                            <input type="text" class="form-control" name="name" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <!--      <label for="email">Email <span class="require">*</span></label>-->
+                            <input type="text" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <!--      <label for="email">Email <span class="require">*</span></label>-->
+                            <input type="text" class="form-control" name="subject" placeholder="Assunto">
+                        </div>
+                        <div class="form-group">
+                            <!--      <label for="message">Message</label>-->
+                            <textarea class="form-control" rows="8" name="message" placeholder="Menssagem"></textarea>
+                        </div>
+                        <div class="padding-top-20">   
+
+                            <button id="contact-button"  type="submit" class="btn btn-block btn-info bt-form "><i class="fa fa-paper-plane"> </i>  </button>
+                        </div>
+                        <p></p>
+
+                    </form>
+                    <!-- END FORM-->
+                    <div class="contact-form"> 
+                        <div class="alert alert-info msg_alert_contact_sending" style="display: none" role="alert">
+
+                        </div>
+                        <div class="alert alert-success msg_alert_contact_sucess" style="display: none" role="alert">
+
+                        </div> 
+                        <div class="alert alert-danger msg_alert_contact_error" style="display: none" role="alert">
+
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- /END CONTACT -->
+        <!-- FOOTER -->
+        <footer>
+            <div class="container margin-top-20 text-center">
+                <div class="row">
+                    <div class="col-md-4 padding-bottom-30">
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/neovu" target="blank"><img src="http://savehome.neovu.io/img/face-logo.svg" alt="facebook from Neovu® Saveplug" /></a>
+                            </li>
+                            <li><a href="https://twitter.com/neovudesign" target="blank"><img src="http://savehome.neovu.io/img/tweet-logo.svg" alt="twitter from Neovu® Saveplug"/></a>
+                            </li>
+                            <li><a href="https://github.com/neovu" target="blank"><img src="http://savehome.neovu.io/img/git-logo.svg" alt="git from neovu owner of the Neovu® Saveplug"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 padding-bottom-3">
+                        <span class="copyright">
+                            <a href="http://www.neovu.io">
+                                <img src="http://savehome.neovu.io/img/neovu-logotype.svg" width="70"/>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-md-4 padding-bottom-3">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="http://www.neovu.com.br/privacy" class="msg_privacy"> </a>
+                            </li>
+                            <li><a href="http://www.neovu.com.br/terms" class="msg_terms"> </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="form-group">
+            <select id="sidebar" class="form-control">
+                <option value="pt_PT">PT</option>
+                <option value="en_US">EN</option> 
+                <option value="es_ES">ES</option> 
+            </select>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script> 
+        <script src="bower_components/jquery-i18n-properties/jquery.i18n.properties.js" type="text/javascript"></script>  
+        <script src="bower_components/scrollspy/jquery.scrollspy.min.js" type="text/javascript"></script>
+
+    </body>
+</html>
