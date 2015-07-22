@@ -198,16 +198,16 @@ $(document).ready(function () {
     });
 
 
-    var myElement = document.getElementById('myCarousel');
-    var mc = new Hammer(myElement);
-
-    mc.on("swipeleft", function (ev) {
-        $('#myCarousel').carousel('next');
-    });
-
-    mc.on("swiperight", function (ev) {
-        $('#myCarousel').carousel('prev');
-    });
+//    var myElement = document.getElementById('myCarousel');
+//    var mc = new Hammer(myElement);
+//
+//    mc.on("swipeleft", function (ev) {
+//        $('#myCarousel').carousel('next');
+//    });
+//
+//    mc.on("swiperight", function (ev) {
+//        $('#myCarousel').carousel('prev');
+//    });
     
     
     
