@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g>
+	<defs>
+		<circle id="SVGID_3_" cx="100" cy="100" r="88.413"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_3_"  overflow="visible"/>
+	</clipPath>
+	<rect x="2.432" y="10.073" clip-path="url(#SVGID_2_)" fill="#FDD636" width="195.136" height="184.333"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="2.432" y1="23.625" x2="197.568" y2="23.625"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="2.432" y1="174.978" x2="197.568" y2="174.978"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="23.962" y1="205.209" x2="23.962" y2="10.073"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="73.891" y1="205.209" x2="73.891" y2="10.073"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="124.736" y1="205.209" x2="124.736" y2="10.073"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="175.124" y1="205.209" x2="175.124" y2="10.073"/>
+	<g clip-path="url(#SVGID_2_)">
+		
+			<rect x="64.217" y="38.403" transform="matrix(0.9939 0.1103 -0.1103 0.9939 9.8144 -10.7592)" fill="#A13D38" width="75.877" height="89.852"/>
+		
+			<rect x="60.467" y="42.283" transform="matrix(0.9939 0.1103 -0.1103 0.9939 10.2195 -10.3219)" fill="#FD3D38" width="75.877" height="89.851"/>
+	</g>
+	<polygon clip-path="url(#SVGID_2_)" fill="#FCA22E" points="148.106,140.592 98.982,160.845 49.857,140.592 49.857,62.876 
+		148.106,62.876 	"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FA6900" stroke-width="3.0111" stroke-miterlimit="10" x1="124.736" y1="151.078" x2="124.736" y2="62.877"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FA6900" stroke-width="3.0111" stroke-miterlimit="10" x1="74.294" y1="151.076" x2="74.294" y2="62.877"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="2.432" y1="124.132" x2="197.568" y2="124.132"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FE7402" stroke-width="3.1697" stroke-miterlimit="10" x1="49.896" y1="124.132" x2="147.634" y2="124.132"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FEA633" stroke-width="4.4788" stroke-miterlimit="10" x1="2.432" y1="73.744" x2="197.568" y2="73.744"/>
+	
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#FE7402" stroke-width="3.178" stroke-miterlimit="10" x1="49.857" y1="73.744" x2="148.106" y2="73.744"/>
+</g>
+</svg>
